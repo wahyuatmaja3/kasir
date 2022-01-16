@@ -1,0 +1,415 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: ocr a;
+}
+
+.container {
+	width: 100vw;
+	background-image: url(../assets/img/topography.png);
+	height: 10000px;
+}
+
+/*Navbar |==================================================================================================================*/
+
+.container .navbar {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5vw;
+	position: fixed;
+}
+
+.container .logo {
+	font-size: 50px;
+}
+
+.container .logo a {
+	transition: .15s ease-out;
+}
+
+.container .logo a:hover {
+	color: #F06543;
+	text-shadow: 2px 5px rgba(0, 0, 0, .1);
+}
+
+.container .logo a {
+	color: #313638;
+	text-decoration: none;
+}
+
+
+/*Menu*/
+.container .menu {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+
+.menu li {
+	list-style-type: none;
+}
+
+.menu .select a {
+	padding: 15px 20px;
+	margin: 0 2px;
+	display: inline-block;
+	font-size: 18px;
+	text-decoration: none;
+	color: #F09D51;
+}
+
+.menu .select a:hover {
+	color: #F06543;
+}
+
+#page {
+	color: #313638;
+}
+
+.navbar .menu .out {
+	padding: 10px;
+	background-color: #F09D51;
+	border-radius: 10px;
+	transition: .4s;
+}
+
+.menu .out img {
+	width: 20px;
+	height: 20px;
+}
+
+.navbar .menu .out a {
+	text-decoration: none;
+	color: #FFF;
+	font-size: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar .menu .out:hover {
+	background-color: #F06543;
+}
+
+/*Burger*/
+.navbar .burger li {
+	list-style-type: none;
+}
+
+/* Content |=============================================================================================================== */
+.content {
+	width: 100%;
+	padding-top: 100px;
+}
+
+
+/* Form .................................| */
+.content .form {
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0 20px;
+	padding: 0 10vw;
+	
+}
+
+.content .form h1 {
+	width: 100%;
+}
+
+.content form {
+	width: 100%;
+	/*background-color: bisque;*/
+	padding: 20px 0;
+	display: grid;
+	grid-template-areas: 
+	"nama nama nama" 
+	"harga harga stok" 
+	"simpan simpan simpan";
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.content form div {
+	width: 100%;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	margin-bottom: 20px;
+	padding: 0 40px;
+}
+
+.content form .nama-barang {
+	grid-area: nama;
+}
+
+.content form .harga-barang {
+	grid-area: harga;
+}
+
+.content form .stok-barang {
+	grid-area: stok;
+}
+
+.content form .simpan {
+	grid-area: simpan;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	margin-top: 20px;
+}
+
+.content form .simpan button{
+	padding: 8px 16px;
+	font-size: 16px;
+	margin-left: 15px;
+	cursor: pointer;
+	border: none;
+	color: #fff;
+	border-radius: 10px;
+}
+
+.content form .simpan .form-reset {
+	background-color: #F06543;
+	transition: .2s ease-out;
+}
+
+.content form .simpan .form-reset:hover {
+	background-color: #C44D2F;
+}
+
+
+
+.content form .simpan .form-submit {
+	background-color: #90a955;
+	transition: .2s ease-out;
+}
+
+.content form .simpan .form-submit:hover {
+	background-color: #4f772d;
+}
+
+.content form label {
+	font-size: 20px;
+	text-transform: capitalize;
+	margin-right: 20px;
+}
+
+.content form input[type="text"],
+.content form input[type="number"] {
+	color: #313638;
+	margin-left: auto;
+	width: 100%;
+	padding: 5px 10px;
+	font-size: 20px;
+	font-family: courier new;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #313638;
+	transition: .3s ease;
+}
+
+.content form input[type="text"]:focus,
+.content form input[type="text"]:hover,
+.content form input[type="number"]:focus,
+.content form input[type="number"]:hover {
+	background-color: #fff;
+	border-bottom: 2px solid #F09D51;
+}
+
+/* Table ......................................| */
+.table {
+	width: 100vw;
+	padding: 0 10vw;
+	margin-top: 50px;
+}
+
+.table table {
+	width: 100%;
+	border-bottom: 4px solid #F09D51;
+}
+
+table thead {
+	height: 50px;
+	color: #fff;
+	background-color: #F09D51;
+}
+
+table thead th {
+	letter-spacing: 2px;
+	font-family: verdana;
+	text-transform: capitalize;
+}
+
+thead #id-barang-th {
+	width: 8%;
+}
+
+thead #nama-barang-th {
+	width: 28%;
+}
+
+thead #harga-barang-th {
+	width: 14%;
+}
+
+thead #stok-barang-th {
+	width: 8%;
+}
+
+thead #tanggal-th {
+	width: 30%;
+}
+
+table tbody {
+	width: 100%;
+	min-height: 400px;
+	overflow: auto;
+}
+
+table tbody tr td {
+	padding: 1rem 2rem;
+	text-align: center;
+}
+
+table tbody tr {
+	background-color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+	background-color: #F0E8E1;
+}
+
+
+#nama-barang{
+	text-align: left;
+}
+
+
+/* Tampilan jika lebar layar <= 950 px */
+
+@media screen and (max-width: 950px) {
+
+	.navbar .menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 300px;
+		height: 400px;
+		padding: 80px 10px;
+		opacity: .95;
+		transition: all .3 ease;
+	}
+
+	.navbar .menu .select {
+		border-bottom: 1px solid #E8E9EB;
+	}
+
+	.navbar .menu .select:hover {
+		background-color: #FAB371;
+	}
+
+	.navbar .menu .select:first-child {
+		border-radius: 10px 10px 0 0;
+	}
+
+	.navbar .menu .last {
+		border-radius: 0 0 10px 10px;
+		border: none;
+	}	
+
+	.navbar .menu .out {
+		margin-top: 20px;
+		background-color: #F06543;
+	}
+
+	.navbar .menu li {
+		width: 100%;
+		background-color: #F09D51;
+	}
+
+	.navbar .menu li a {
+		color: #fff;
+		transition: .3s ease;
+	}
+
+
+	.navbar .burger {
+		width: 40px;
+		height: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-between;
+		cursor: pointer;
+		z-index: 100;
+		position: fixed;
+		top: 25px;
+		right: 5vw;
+	}
+
+	.navbar button {
+		background: transparent;
+		border: none;
+	}
+
+	.navbar .burger li {
+		list-style-type: none;
+		width: 100%;
+		height: 5px;
+		background-color: #313638;
+		border-radius: 5px;
+	}
+
+	/* Form ============================================== */
+	.content form {
+		grid-template-areas: "nama" "harga" "stok" "simpan";
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
+	}
+
+	.content form label {
+		width: 100%;
+	}
+
+	.content form div {
+		flex-wrap: wrap;
+	}
+
+	.content form .simpan {
+		justify-content: space-between;
+		padding: 0 40px;
+	}
+
+	.content form .simpan button {
+		padding: 12px 30px;
+		font-size: 20px;
+	}
+
+	.content .form h1 {
+		font-size: 25px;
+	}
+
+
+	/* Table ....................................| */
+	.table {
+		padding: 0;
+	}
+
+	.table h1 {
+		padding-left: 10vw;
+	}
+}

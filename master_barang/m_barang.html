@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>MASTER BARANG | KASIR</title>
+</head>
+<body>
+	
+	<div class="container">
+
+		<!-- Navbar -->
+		<div class="navbar">
+			<h1 class="logo"><a href="../index.php">KASIR</a></h1>	
+			<div class="menu">
+				<li class="select" ><a href="" id="page">Master barang</a></li>
+				<li class="select"><a href="">Master transaksi</a></li>
+				<li class="select last"><a href="">Report</a></li>
+				<li class="out"><a href="">Keluar <img src="../assets/img/log-out.png"></a></li>
+			</div>
+			<button class="burger">
+				<li></li>
+				<li></li>
+				<li></li>
+			</button>
+		</div>
+
+		<!-- Content -->
+		<div class="content">
+			<!-- <h1 class="form-judul">Master barang</h1> -->
+			<div class="form">
+				<h1 class="head-form">Tambah barang</h1>	
+				<form action="">
+					<div class="nama-barang">
+						<label for="nama-barang-isi">Nama</label>
+						<input type="text" id="nama-barang-isi">
+					</div>
+					<div class="harga-barang">
+						<label for="harga-barang-isi">Harga</label>
+						<input type="number" id="harga-barang-isi" step="500" min="0">
+					</div>
+					<div class="stok-barang">
+						<label for="stok-barang-isi">Stok</label>
+						<input type="number" id="stok-barang-isi">
+					</div>
+					<div class="simpan">
+						<button class="form-reset" type="reset">Batal</button>
+						<button class="form-submit" type="submit">Simpan</button>
+					</div>
+
+				</form>
+			</div>
+			<div class="table">
+				<h1 class="table-judul">Data barang</h1>
+				<table cellpadding="5px" cellspacing="0">
+					<thead>
+						<th id="id-barang-th">Id</th>
+						<th id="nama-barang-th">Nama</th>
+						<th id="harga-barang-th">Harga</th>
+						<th id="stok-barang-th">Stok</th>
+						<th id="tanggal-th">Pembaruan terbaru</th>
+					</thead>
+					<tbody>
+						<tr class="row">
+							<td id="id-barang">044</td>							
+							<td id="nama-barang">Pensil</td>
+							<td id="harga-barang">2000</td>
+							<td id="stok-barang">20</td>
+							<td id="tanggal">2022-01-16</td>
+						</tr>
+
+						<tr id="row">
+							<td id="id-barang">022</td>							
+							<td id="nama-barang">Penghapus</td>
+							<td id="harga-barang">1000</td>
+							<td id="stok-barang">20</td>
+							<td id="tanggal">2022-01-16</td>
+						</tr>
+
+						<tr id="row">
+							<td id="id-barang">033</td>							
+							<td id="nama-barang">bolpoin</td>
+							<td id="harga-barang">2000</td>
+							<td id="stok-barang">12</td>
+							<td id="tanggal">2022-01-16</td>
+						</tr>
+
+						<tr id="row">
+							<td id="id-barang">011</td>							
+							<td id="nama-barang">Penggaris</td>
+							<td id="harga-barang">3000</td>
+							<td id="stok-barang">15</td>
+							<td id="tanggal">2022-01-16</td>
+						</tr>
+
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="footer"></div>
+	</div>
+
+	<script>
+		let navToggler = document.querySelector(".burger");
+
+		navToggler.addEventListener("click", navToggle);
+
+		function navToggle() {
+			const nav = document.querySelector('.menu');
+			navToggler.classList.toggle("open");
+			if (navToggler.classList.contains("open")) {
+				nav.style.right = -300 + "px";
+			} 
+			else {
+				nav.removeAttribute("style");
+			}
+		}
+
+	</script>
+
+</body>
+</html>
