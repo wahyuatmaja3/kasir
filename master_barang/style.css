@@ -11,6 +11,8 @@
 	height: 10000px;
 }
 
+color
+
 /*Navbar |==================================================================================================================*/
 
 .container .navbar {
@@ -407,6 +409,8 @@ table tbody tr:nth-child(even) {
 	/* Table ....................................| */
 	.table {
 		padding: 0;
+		width: 100vw;
+		overflow-x: auto;
 	}
 
 	.table h1 {
